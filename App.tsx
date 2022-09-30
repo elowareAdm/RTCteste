@@ -44,7 +44,7 @@ const App: () => React$Node = () => {
 
       if (isVoiceOnly) {
         let videoTrack = await mediaStream.getVideoTracks()[0];
-        videoTrack.enabled = false;
+        videoTrack._enabled = false;
       }
       setLocalMediaStream(mediaStream);
     } catch (err) {
